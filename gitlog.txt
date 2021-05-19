@@ -1,3 +1,9 @@
+commit ac2a4fea35d87cf9bf88c914854fae0bf5628e8b
+Author: Satyanarayana Dash <satya.d135@gmail.com>
+Date:   Wed May 19 02:54:13 2021 +0530
+
+    uploading 'export_gitlog' script and git log file
+
 commit dd4e9de08d823b16cbf005aacf00f60358fb37de
 Author: Satyanarayana Dash <satya.d135@gmail.com>
 Date:   Tue May 18 18:25:37 2021 +0530
