@@ -1,19 +1,18 @@
 import subprocess
 import os
 
-clone_cmd = str("git clone git@github.com:satyanarayanadash/project1")
+clone_cmd = "git clone git@github.com:satyanarayanadash/project1"
+export_gitlog = "git log > gitlog.txt | ls -la"
 
-def repo_clone():
-    subprocess.run(str(clone_cmd), shell=True)
-    return
+def subp_run(cmd):
+    subprocess.run(cmd, shell=True)
 
-def export_gitlog():
-    cwd = os.getcwd()
-    repo_name = clone_cmd.split("/")
-    repo_path = cwd + "/" + repo_name[1]
+def change_dir():
+    repo_name = clone_cmd.split("/")[1]
+    repo_path = os.getcwd() + "/" + repo_name
     os.chdir(repo_path)
-    subprocess.run("git log > gitlog.txt", shell=True)
-    return
+    print("Current working directory ->", os.getcwd())
 
-repo_clone()
-export_gitlog()
+subp_run(clone_cmd)
+change_dir()
+subp_run(export_gitlog)
